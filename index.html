@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+      
 	<meta property="og:image" content="http://www.featurecreeprobot.com/strips/000.png"/>
     <meta property="og:url" content="http://www.featurecreeprobot.com"/>
     <meta property="og:type" content="website" />
@@ -22,11 +24,24 @@
       
     <title>Feature Creep Robot by Dovyski</title>
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+      
+    <style>
+        body {font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;color:#777;font-weight:300;}
+        h1, h2, h3, h4, h5, h6 { color:#222; margin:0 0 20px; }
+        .wrapper { width:860px; margin:0 auto; text-align: center; }
+        a, a:active, a:link, a:visited { color:#333; }
+        .strip { clear: both; }
+        header { width: 100%; text-align: center;}
+        strong {color:#222;font-weight:700;}
+        section {width: 100%;padding: 20px 0 40px 0;}
+        nav {width: 100%;}
+        nav span {color: #424242;font-size: 48px;margin: 10px;font-weight: bold;}
+        footer {margin-top: 50px;width: 100%;bottom:50px;}
+        #nav-prev, #nav-next {display: inline-block;}
+    </style>
   </head>
   <body>
     <div class="wrapper">
@@ -54,7 +69,7 @@
         <p><small>Hosted on <a href="https://github.com/Dovyski/FeatureCreepRobot.com" target="_blank">GitHub Pages</a>.</small></p>
       </footer>
     </div>
-    <script type="application/javascript">
+    <script>
         var MAX_STRIP = 0;
         var gCurrentStrip = MAX_STRIP;
         
@@ -90,6 +105,15 @@
         document.getElementById('nav-next').addEventListener("click",function (e) { loadStrip(gCurrentStrip + 1); }, false);
         
         loadStrip(getStripFromUrl());
+    </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-10567379-9', 'featurecreeprobot.com');
+      ga('send', 'pageview');
     </script>
   </body>
 </html>
