@@ -4,9 +4,9 @@
       </section>  
       
       <nav>
-          {% if page.previous %} <a href="{{ site.baseurl }}{{ page.previous.url }}" id="nav-prev"><img src="../img/arrow_right.png" width="40" height="40" title="Previous"/></a> {% endif %}
+          {% if page.previous %} <a href="{{ page.previous.url }}" id="nav-prev"><img src="../img/arrow_right.png" width="40" height="40" title="Previous"/></a> {% endif %}
           <span id="strip-number">#{{ page.num }}</span>
-          {% if page.next %} <a href="{{ site.baseurl }}{{ page.next.url }}" id="nav-prev"><img src="../img/arrow_right.png" width="40" height="40" title="Next"/></a> {% endif %}
+          {% if page.next %} <a href="{{ page.next.url }}" id="nav-next"><img src="../img/arrow_left.png" width="40" height="40" title="Next"/></a> {% endif %}
       </nav>
 
 {% include footer.html dir="../" %}
