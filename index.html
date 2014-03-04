@@ -20,7 +20,6 @@
     <meta name="twitter:image:height" content="400"/>
 	<link rel="shortcut icon" href="favicon.ico">
       
-      
     <title>Feature Creep Robot by Dovyski</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
@@ -36,13 +35,13 @@
       </header>
         
       <section>
-          <img src="img/stripe_coming_soon.png" width="600" height="310" title="Coming soon!" class="strip"/>
+          <img src="img/stripe_coming_soon.png" width="600" height="310" title="Strip" class="strip" id="strip"/>
       </section>
         
       <nav>
-          <a href="#"><img src="img/arrow_right.png" width="40" height="40" title="Previous"/></a>
-          <span>#000</span>
-          <a href="#"><img src="img/arrow_left.png" width="40" height="40" title="Next"/></a>
+          <a href="#" id="nav-prev"><img src="img/arrow_right.png" width="40" height="40" title="Previous"/></a>
+          <span id="strip-number">Loading</span>
+          <a href="#" id="nav-next"><img src="img/arrow_left.png" width="40" height="40" title="Next"/></a>
       </nav>
         
       <footer>
@@ -55,5 +54,42 @@
         <p><small>Hosted on <a href="https://github.com/Dovyski/FeatureCreepRobot.com" target="_blank">GitHub Pages</a>.</small></p>
       </footer>
     </div>
+    <script type="application/javascript">
+        var MAX_STRIP = 0;
+        var gCurrentStrip = MAX_STRIP;
+        
+        // From: http://stackoverflow.com/a/8764051/29827
+        function getURLParameter(name) {
+            return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null;
+        }
+        
+        function getStripFromUrl() {
+            var id = getURLParameter('id');
+            return id ? (id | 0) : -1;
+        }
+        
+        function loadStrip(id) {
+            var strip = document.getElementById('strip');
+            
+            id = id | 0;
+            id = id > MAX_STRIP || id < 0 ? MAX_STRIP : id;
+            
+            gCurrentStrip = id;
+            strip.src = './strips/' + (id | 0) + '.png';
+            
+            adjustNavButtons(id);
+        }
+        
+        function adjustNavButtons(id) {            
+            document.getElementById('strip-number').innerHTML = '#' + id;
+            document.getElementById('nav-prev').style.display = id <= 0 ? 'none' : 'inline-block';
+            document.getElementById('nav-next').style.display = id >= MAX_STRIP ? 'none' : 'inline-block';
+        }
+        
+        document.getElementById('nav-prev').addEventListener("click",function (e) { loadStrip(gCurrentStrip - 1); }, false);
+        document.getElementById('nav-next').addEventListener("click",function (e) { loadStrip(gCurrentStrip + 1); }, false);
+        
+        loadStrip(getStripFromUrl());
+    </script>
   </body>
 </html>
