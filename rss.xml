@@ -25,7 +25,7 @@ layout: nil
 			<author>@As3GameGears (Fernando Bevilacqua)</author>
 			<pubDate>{{ pubDate }}</pubDate>
 			<link>http://www.featurecreeprobot.com{{ post.url }}</link>
-            <guid isPermaLink="true">http://www.featurecreeprobot.com/{{ post.url }}</guid>
+            <guid isPermaLink="true">http://www.featurecreeprobot.com{{ post.url }}</guid>
 		</item>	
         {% endfor %}
     </channel>
