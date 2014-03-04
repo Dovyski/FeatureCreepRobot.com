@@ -20,8 +20,8 @@ layout: nil
             {% assign pubDate = post.date | date_to_rfc822 %}
         {% endif %}
         <item>
-			<title>Feature Creep Robot #1</title>
-			<description>{{ post.content | xml_escape}}</description>
+			<title>Feature Creep Robot #{{ post.num }}</title>
+			<description>{{ post.title | xml_escape}}</description>
 			<author>@As3GameGears (Fernando Bevilacqua)</author>
 			<pubDate>{{ pubDate }}</pubDate>
 			<link>http://www.featurecreeprobot.com{{ post.url }}</link>

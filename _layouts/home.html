@@ -1,12 +1,14 @@
 {% include header.html dir="./" %}
-        
+    {% assign post = site.posts.first %}
+    {% assign prev = post.num - 1 %}
+
       <section>
-          <img src="strips/1.png" title="Strip" class="strip" id="strip"/>
+          <img src="strips/{{ post.num }}.png" title="{{ post.title }}" class="strip" id="strip"/>
       </section>  
-      
+
       <nav>
-          <a href="./0/" id="nav-prev"><img src="img/arrow_right.png" width="40" height="40" title="Previous"/></a>
-          <span id="strip-number">#1</span>
+          <a href="/{{ prev }}" id="nav-prev"><img src="img/arrow_right.png" width="40" height="40" title="Previous"/></a>
+          <span id="strip-number">#{{ post.num }}</span>
       </nav>
 
 {% include footer.html dir="./" %}
