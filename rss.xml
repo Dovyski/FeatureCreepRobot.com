@@ -9,8 +9,16 @@
 		<description>Gamedev has a lot of funny situations, it's time to laugh about it.</description>
 		<lastBuildDate>Tue, 04 Mar 2014 02:53:47 +0000</lastBuildDate>
 		<atom:link href="http://featurecreeprobot.com/rss.xml" rel="self" type="application/rss+xml" />
-			
-		<item>
+		
+        <item>
+			<title>Feature Creep Robot #1</title>
+			<description>Fight procrastination with all you've got!</description>
+			<author>@As3GameGears (Fernando Bevilacqua)</author>
+			<pubDate>Tue, 04 Mar 2014 02:53:47 +0000</pubDate>
+			<guid>http://www.featurecreeprobot.com/?id=1</guid>
+		</item>	
+		
+        <item>
 			<title>Feature Creep Robot #0</title>
 			<description>Rule of thumb: no placeholders for producers.</description>
 			<author>@As3GameGears (Fernando Bevilacqua)</author>
