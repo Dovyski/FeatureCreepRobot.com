@@ -1,3 +1,6 @@
+---
+layout: nil
+---
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
@@ -7,23 +10,17 @@
 		<language>en-us</language>
 		<link>http://www.featurecreeprobot.com/</link>
 		<description>Gamedev has a lot of funny situations, it's time to laugh about it.</description>
-		<lastBuildDate>Tue, 04 Mar 2014 02:53:47 +0000</lastBuildDate>
+		<lastBuildDate>{{ site.time | date_to_xmlschema }}</lastBuildDate>
 		<atom:link href="http://featurecreeprobot.com/rss.xml" rel="self" type="application/rss+xml" />
 		
+        {% for post in site.posts limit:20 %}
         <item>
 			<title>Feature Creep Robot #1</title>
 			<description>Fight procrastination with all you've got!</description>
 			<author>@As3GameGears (Fernando Bevilacqua)</author>
-			<pubDate>Tue, 04 Mar 2014 02:53:47 +0000</pubDate>
-			<guid>http://www.featurecreeprobot.com/1/</guid>
+			<pubDate>{{ post.date | date_to_xmlschema }}</pubDate>
+			<guid>http://www.featurecreeprobot.com{{ post.id }}</guid>
 		</item>	
-		
-        <item>
-			<title>Feature Creep Robot #0</title>
-			<description>Rule of thumb: no placeholders for producers.</description>
-			<author>@As3GameGears (Fernando Bevilacqua)</author>
-			<pubDate>Tue, 04 Mar 2014 02:53:47 +0000</pubDate>
-			<guid>http://www.featurecreeprobot.com/0/</guid>
-		</item>	
+        {% endfor %}
     </channel>
 </rss>
