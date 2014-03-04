@@ -1,13 +1,12 @@
 {% include header.html dir="./" %}
     {% assign post = site.posts.first %}
-    {% assign prev = post.num - 1 %}
 
       <section>
           <img src="strips/{{ post.num }}.png" title="{{ post.title }}" class="strip" id="strip"/>
       </section>  
 
       <nav>
-          <a href="/{{ prev }}" id="nav-prev"><img src="img/arrow_right.png" width="40" height="40" title="Previous"/></a>
+          <a href="/{{ post.previous.url }}" id="nav-prev"><img src="img/arrow_right.png" width="40" height="40" title="Previous"/></a>
           <span id="strip-number">#{{ post.num }}</span>
       </nav>
 
