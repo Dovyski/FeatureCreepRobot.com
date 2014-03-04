@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+		<title>Feature Creep Robot</title>
+		<category>Web Comic</category>
+		<copyright>2014 Fernando Bevilacqua. All rights reserved.</copyright>
+		<language>en-us</language>
+		<link>http://www.featurecreeprobot.com/</link>
+		<description>Gamedev has a lot of funny situations, it's time to laugh about it.</description>
+		<lastBuildDate>Tue, 04 Mar 2014 02:53:47 +0000</lastBuildDate>
+		<atom:link href="http://featurecreeprobot.com/rss.xml" rel="self" type="application/rss+xml" />
+			
+		<item>
+			<title>Feature Creep Robot #0</title>
+			<description>Comic title.</description>
+			<author>@As3GameGears (Fernando Bevilacqua)</author>
+			<pubDate>Tue, 04 Mar 2014 02:53:47 +0000</pubDate>
+			<guid>http://www.featurecreeprobot.com/?id=0</guid>
+		</item>	
+    </channel>
+</rss>
