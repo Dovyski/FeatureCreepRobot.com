@@ -14,12 +14,18 @@ layout: nil
 		<atom:link href="http://featurecreeprobot.com/rss.xml" rel="self" type="application/rss+xml" />
 		
         {% for post in site.posts limit:20 %}
+        {% if post.pubDate %}
+            {% assign pubDate = post.pubDate | date_to_rfc822 %}
+        {% else  %}
+            {% assign pubDate = post.date | date_to_rfc822 %}
+        {% endif %}
         <item>
 			<title>Feature Creep Robot #1</title>
-			<description>Fight procrastination with all you've got!</description>
+			<description>{{ post.content | xml_escape}}</description>
 			<author>@As3GameGears (Fernando Bevilacqua)</author>
-			<pubDate>{{ post.date | date_to_xmlschema }}</pubDate>
-			<guid>http://www.featurecreeprobot.com{{ post.id }}</guid>
+			<pubDate>{{ pubDate }}</pubDate>
+			<link>{{ site.url }}/{{ post.url }}</link>
+            <guid isPermaLink="true">{{ site.url }}/{{ post.url }}</guid>
 		</item>	
         {% endfor %}
     </channel>
