@@ -6,13 +6,13 @@ layout: nil
     <channel>
 		<title>Feature Creep Robot</title>
 		<category>Web Comic</category>
-		<copyright>2014 Fernando Bevilacqua. All rights reserved.</copyright>
+		<copyright>2016 Fernando Bevilacqua. All rights reserved.</copyright>
 		<language>en-us</language>
 		<link>http://www.featurecreeprobot.com/</link>
 		<description>Gamedev has a lot of funny situations, it's time to laugh about it.</description>
 		<lastBuildDate>{{ site.time | date_to_xmlschema }}</lastBuildDate>
 		<atom:link href="http://featurecreeprobot.com/rss.xml" rel="self" type="application/rss+xml" />
-		
+
         {% for post in site.posts limit:20 %}
         {% if post.pubDate %}
             {% assign pubDate = post.pubDate | date_to_rfc822 %}
@@ -26,7 +26,7 @@ layout: nil
 			<pubDate>{{ pubDate }}</pubDate>
 			<link>http://www.featurecreeprobot.com{{ post.url }}</link>
             <guid isPermaLink="true">http://www.featurecreeprobot.com{{ post.url }}</guid>
-		</item>	
+		</item>
         {% endfor %}
     </channel>
 </rss>
