@@ -1,3 +1,2 @@
 name: Feature Creep Robot
-markdown: redcarpet
-permalink: /:title
+permalink: /:title/
