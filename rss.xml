@@ -21,7 +21,7 @@ layout: nil
         {% endif %}
         <item>
 			<title>Feature Creep Robot #{{ post.num }}</title>
-			<description>{{ post.title | xml_escape}}</description>
+			<description><![CDATA[<a href="http://www.featurecreeprobot.com{{ post.url }}"><img src="http://www.featurecreeprobot.com/strips/{{ post.num }}.png" title="{{ post.title | xml_escape}}" /></a><p>{{ post.title | xml_escape}}</p>]]></description>
 			<author>@As3GameGears (Fernando Bevilacqua)</author>
 			<pubDate>{{ pubDate }}</pubDate>
 			<link>http://www.featurecreeprobot.com{{ post.url }}</link>
