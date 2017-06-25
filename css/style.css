@@ -1,11 +1,11 @@
 body {font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;color:#777;font-weight:300;}
 h1, h2, h3, h4, h5, h6 { color:#222; margin:0 0 20px; }
-.wrapper { width:860px; margin:0 auto; text-align: center; }
+.wrapper { width:100%; margin:0 auto; text-align: center; }
 a, a:active, a:link, a:visited { color:#333; }
 .strip { clear: both; }
 header { width: 100%; text-align: center;}
 strong {color:#222;font-weight:700;}
-section {width: 100%; padding: 20px 0 5px 0;}
+section {width: 100%; padding: 20px 0 5px 0; text-align: center;}
 .social { width: 50%; clear: both; text-align: center; margin: 0 auto; overflow: auto;}
 .social div { display: inline-block; padding: 5px; }
 nav {width: 100%;}
